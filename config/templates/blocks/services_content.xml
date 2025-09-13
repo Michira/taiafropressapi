@@ -1,0 +1,39 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>services_content</key>
+
+    <meta>
+        <title lang="en">Services Content</title>
+        <title lang="de">Services Content</title>
+    </meta>
+
+    <properties>
+        <property name="title" type="text_line">
+            <meta>
+                <title lang="en">Title</title>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property>
+        
+        <property name="icon" type="single_icon_selection">
+            <meta>
+                <title>Icon</title>
+            </meta>
+
+            <params>
+                <param name="icon_set" value="lucide"/>
+            </params>
+        </property>
+
+        <property name="description" type="text_area">
+            <meta>
+                <title lang="en">Description</title>
+            </meta>
+        </property>        
+    </properties>
+</template>

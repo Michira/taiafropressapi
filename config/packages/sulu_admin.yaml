@@ -1,0 +1,12 @@
+sulu_admin:
+    email: "%env(SULU_ADMIN_EMAIL)%"
+    forms:
+        directories:
+            - "%kernel.project_dir%/config/forms"
+    lists:
+        directories:
+            - "%kernel.project_dir%/config/lists"
+
+    icon_sets:
+        # The 'lucide' key is the name you'll use to reference this icon set
+        lucide: svg://%kernel.project_dir%/public/icons/lucide

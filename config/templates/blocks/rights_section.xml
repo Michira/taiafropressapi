@@ -1,0 +1,84 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>rights_section</key>
+
+    <meta>
+        <title lang="en">Rights Section</title>
+        <title lang="de">Rights Section</title>
+    </meta>
+
+    <properties>
+        <property name="headline_start" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Title</title>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property>
+
+        <property name="headline_end" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Sub Title</title>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property>
+
+        <property name="text" type="text_area" mandatory="true">
+            <meta>
+                <title lang="en">Text</title>
+            </meta>
+        </property>
+
+        <block name="blocks" default-type="rights" minOccurs="0">
+            <meta>
+                <title lang="en">Rights List</title>
+            </meta>
+            <params>
+                <param name="add_button_text">
+                    <meta>
+                        <title lang="en">Add Right</title>
+                        <title lang="de">Neuen Inhalt hinzufügen</title>
+                    </meta>
+                </param>
+            </params> 
+            <types>
+                <type name="rights">
+                    <properties>
+                        <property name="title" type="text_line">
+                            <meta>
+                                <title lang="en">Title</title>
+                            </meta>
+                        </property>       
+                    </properties>
+                </type>
+            </types>
+        </block>
+
+        <property name="download1" type="single_media_selection" mandatory="true">
+            <meta>
+                <title lang="en">Download1</title>
+            </meta>
+            <params>
+                <param name="types" value="image"/>
+                <param name="min_files" value="1"/>
+            </params>
+        </property>
+
+        <property name="download2" type="single_media_selection" mandatory="true">
+            <meta>
+                <title lang="en">Download2</title>
+            </meta>
+            <params>
+                <param name="types" value="image"/>
+                <param name="min_files" value="1"/>
+            </params>
+        </property>
+             
+    </properties>
+</template>

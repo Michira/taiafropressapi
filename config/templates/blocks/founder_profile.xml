@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>founder_profile</key>
+
+    <meta>
+        <title lang="en">Achievement</title>
+        <title lang="de">Achievement</title>
+    </meta>
+
+    <properties>
+        <property name="label" type="text_line">
+            <meta>
+                <title lang="en">Label</title>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property>
+        
+       <property name="icon" type="single_icon_selection">
+            <meta>
+                <title>Icon</title>
+            </meta>
+
+            <params>
+                <param name="icon_set" value="lucide"/>
+            </params>
+        </property>
+
+        <property name="number" type="text_line">
+            <meta>
+                <title lang="en">Number</title>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property>       
+    </properties>
+</template>

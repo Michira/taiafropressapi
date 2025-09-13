@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>founder_section</key>
+
+    <meta>
+        <title lang="en">Founder Section</title>
+        <title lang="de">Founder Section</title>
+    </meta>
+
+    <properties>
+        <property name="headline_start" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Headline Start</title>
+                <info_text lang="en">
+                    The first part of the headline for the founder section.
+                </info_text>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property>
+
+        <property name="headline_end" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Headline End</title>
+                <info_text lang="en">
+                    The second part of the headline for the founder section.
+                </info_text>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property>
+
+        <property name="title" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Title</title>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property>
+
+        <block name="blocks" default-type="custom_paragraph">            
+            <types>
+                <type ref="custom_paragraph"/>
+                <type ref="founder_profile"/>
+            </types>
+        </block>      
+    </properties>
+</template>

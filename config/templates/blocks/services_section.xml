@@ -1,0 +1,55 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>services_section</key>
+
+    <meta>
+        <title lang="en">Services Section</title>
+        <title lang="de">Services Section</title>
+    </meta>
+
+    <properties>
+        <property name="headline_start" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Headline Start</title>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property>
+
+        <property name="headline_end" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Headline End</title>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property>
+        
+        <property name="description" type="text_area">
+            <meta>
+                <title lang="en">Description</title>
+            </meta>
+        </property> 
+
+        <block name="blocks" default-type="services_content" minOccurs="0">
+            <meta>
+                <title lang="en">Services List</title>
+            </meta>
+            <params>
+                <param name="add_button_text">
+                    <meta>
+                        <title lang="en">Add Service</title>
+                        <title lang="de">Neuen Inhalt hinzufügen</title>
+                    </meta>
+                </param>
+            </params> 
+            <types>
+                <type ref="services_content"/>
+            </types>
+        </block>
+    </properties>
+</template>

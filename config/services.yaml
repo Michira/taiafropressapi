@@ -1,0 +1,36 @@
+# This file is the entry point to configure your own services.
+# Files in the packages/ subdirectory configure your dependencies.
+
+# Put parameters here that don't need to change on each machine where the app is deployed
+# https://symfony.com/doc/current/best_practices.html#use-parameters-for-application-configuration
+parameters:
+    default_locale: en
+
+services:
+    # default configuration for services in *this* file
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    # makes classes in src/ available to be used as services
+    # this creates a service per class whose id is the fully-qualified class name
+    App\:
+        resource: '../src/'
+
+    # add more service definitions when explicit configuration is needed
+    # please note that last definitions always *replace* previous ones
+    App\EventListener\SpecialFormHandler:
+        arguments:
+            - '@sulu_form.builder'  
+            - '@sulu_form.handler'
+            - '@Sulu\Bundle\FormBundle\Configuration\FormConfigurationFactory'
+            - '@event_dispatcher'
+            - '@App\Services\Form\FormRequestValidator'
+            - '@App\Services\Form\FormRequestPreparator'
+            - '@App\Request\JsonRequestProcessor'
+        tags:
+            - { name: kernel.event_listener, event: kernel.request, method: onKernelRequest, priority: 0 }
+            - { name: kernel.event_listener, event: kernel.response, method: onKernelResponse, priority: 0 }
+    App\Services\Form\FormRequestValidator: ~
+    App\Services\Form\FormRequestPreparator: ~
+    App\Services\Form\FormBuilderMetadataValidator: ~

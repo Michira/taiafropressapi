@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Basic Form</title>
+</head>
+<body>
+    {% if content.form %}
+        {% if app.request.get('send') != 'true' %}
+            {# FORM THEME #}
+            {% form_theme content.form '@SuluForm/themes/basic.html.twig' %}
+            {{ form(content.form) }}
+        {% else %}
+            {{ view.form.entity.successText|raw }}
+        {% endif %}
+    {% endif %}
+</body>
+</html>

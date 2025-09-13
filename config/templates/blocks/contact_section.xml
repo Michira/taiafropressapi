@@ -1,0 +1,72 @@
+<?xml version="1.0" ?>
+<template xmlns="http://schemas.sulu.io/template/template"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <key>contact_section</key>
+
+    <meta>
+        <title lang="en">Contact Section</title>
+        <title lang="de">Contact Section</title>
+    </meta>
+
+    <properties>
+        <property name="email" type="email" mandatory="true">
+            <meta>
+                <title lang="en">Email</title>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property>
+
+        <property name="phone" type="phone" mandatory="true">
+            <meta>
+                <title lang="en">Phone</title>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property> 
+        <property name="address" type="text_line" mandatory="true">
+            <meta>
+                <title lang="en">Address</title>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property> 
+        <property name="facebook" type="url" mandatory="true">
+            <meta>
+                <title lang="en">Facebook</title>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property>  
+        <property name="instagram" type="url" mandatory="true">
+            <meta>
+                <title lang="en">Instagram</title>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property>  
+        <property name="twitter" type="url" mandatory="true">
+            <meta>
+                <title lang="en">Twitter</title>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property>  
+        <property name="linkedin" type="url" mandatory="true">
+            <meta>
+                <title lang="en">linked In</title>
+            </meta>
+            <params>
+                <param name="max_length" value="100"/>
+            </params>
+        </property>              
+    </properties>
+</template>
